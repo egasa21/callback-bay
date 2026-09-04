@@ -32,3 +32,5 @@ app.get("/health", (_req, res) => {
 app.use(notifyRouter);
 
 app.use(errorHandler);
+
+export default app;

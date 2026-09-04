@@ -96,9 +96,11 @@ See `.env.example`:
 
 ## Deployment (Vercel)
 
-`api/index.ts` exports the Express app as the Vercel serverless entry point.
-`vercel.json` rewrites all requests to that function so the public callback
-URL remains:
+Vercel's zero-config Express detection picks up `src/app.ts` directly (it
+matches one of Vercel's recognized entry filenames) and uses its
+`export default app` as the serverless function — no `api/` folder or
+`vercel.json` is needed. The whole app is deployed as a single Vercel
+Function, so the public callback URL is simply:
 
 ```
 https://<deployment>.vercel.app/v1.0/debit/notify
