@@ -16,7 +16,7 @@ app.get("/", (_req, res) => {
     service: "AstraPay Merchant Notify Mock",
     status: "running",
     endpoints: {
-      notify: "POST /v1.0/debit/notify",
+      notify: "POST /api/snap/v1.0/debit/notify",
       health: "GET /health",
     },
   });

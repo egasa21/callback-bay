@@ -33,7 +33,7 @@ Health check, returns `{ "status": "UP", "service": "astrapay-merchant-notify-mo
 
 Root endpoint listing available endpoints.
 
-### `POST /v1.0/debit/notify`
+### `POST /api/snap/v1.0/debit/notify`
 
 Simulates the merchant callback endpoint for AstraPay Direct Debit Payment
 Notify.
@@ -61,7 +61,7 @@ Example:
 ```bash
 curl --location \
   --request POST \
-  'http://localhost:3000/v1.0/debit/notify' \
+  'http://localhost:3000/api/snap/v1.0/debit/notify' \
   --header 'Authorization: Bearer dummy-token' \
   --header 'Content-Type: application/json' \
   --header 'X-TIMESTAMP: 2026-09-04T09:30:00+07:00' \
@@ -103,7 +103,7 @@ matches one of Vercel's recognized entry filenames) and uses its
 Function, so the public callback URL is simply:
 
 ```
-https://<deployment>.vercel.app/v1.0/debit/notify
+https://<deployment>.vercel.app/api/snap/v1.0/debit/notify
 ```
 
 ## Scripts
